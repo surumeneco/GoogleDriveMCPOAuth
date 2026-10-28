@@ -1,0 +1,2 @@
+# GoogleDriveMCPOAuth
+個人用GoogleDriveMCPのOAuthのためのポリシー公開用サイト
