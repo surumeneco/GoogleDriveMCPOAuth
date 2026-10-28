@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GoogleDriveMCPOAuthのプライバシーポリシー。Google Driveデータのアクセス、利用、保存、第三者サービスへの送信、アクセス権限の取り消しについて説明します。">
+  <meta name="color-scheme" content="light">
+  <title>プライバシーポリシー | GoogleDriveMCPOAuth</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="GoogleDriveMCPOAuth ホーム"><span class="brand-mark" aria-hidden="true">G<span>+</span></span><span>GoogleDriveMCPOAuth</span></a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <a href="./index.html">ホーム</a>
+        <a href="./index.html#architecture">接続の仕組み</a>
+        <a href="./privacy.html" aria-current="page">プライバシー</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro container" aria-labelledby="privacy-title">
+      <span class="kicker">PRIVACY POLICY</span>
+      <h1 id="privacy-title">プライバシーポリシー</h1>
+      <p class="page-lead">GoogleDriveMCPOAuth（以下「本アプリ」）は、個人の開発環境からGoogle Driveに接続するためのOAuthアプリです。本ポリシーは、Google APIを通じて取り扱うデータと利用目的を説明するものです。</p>
+      <p class="revision">最終更新日：2026年10月28日</p>
+    </section>
+
+    <div class="container document-layout">
+      <nav class="toc" aria-label="このページの目次">
+        <h2>目次</h2>
+        <a href="#operator">1. 運用者と目的</a>
+        <a href="#data">2. アクセスする情報</a>
+        <a href="#purposes">3. 情報の利用方法</a>
+        <a href="#storage">4. 保存と保護</a>
+        <a href="#third-parties">5. 外部サービスへの送信</a>
+        <a href="#retention">6. 保持・削除・認可取消</a>
+        <a href="#tracking">7. Webサイトの計測</a>
+        <a href="#changes">8. ポリシーの変更</a>
+        <a href="#contact">9. お問い合わせ</a>
+      </nav>
+
+      <article class="policy-content">
+        <section id="operator">
+          <h2>1. 運用者と目的</h2>
+          <p>本アプリは、GitHubユーザー <a href="https://github.com/surumeneco" target="_blank" rel="noopener noreferrer">surumeneco</a> による個人利用を目的としたツールです。VS Code上のAIコーディングエージェントと、Google Drive上の仕様書・設計書などの文書資産を連携するために使用します。一般利用者向けのホスティングサービスは提供していません。</p>
+          <p>本サイトはOAuthアプリの説明とプライバシー情報の公開を目的とする静的サイトです。認証そのものはGoogleの画面で行われ、Google DriveへのAPIアクセスは利用者が設定したMCPサーバーから行われます。</p>
+        </section>
+
+        <section id="data">
+          <h2>2. アクセスする情報</h2>
+          <p>本アプリを通じて、OAuthで承認された範囲に応じ、次の情報にアクセスする場合があります。</p>
+          <ul>
+            <li>Google Drive上のファイル・フォルダの名前、ID、MIMEタイプ、更新日時などのメタデータ</li>
+            <li>ファイルの本文・内容（Markdown、テキスト、Googleドキュメントなど）</li>
+            <li>文書の作成・更新・移動などの操作に必要なファイル情報</li>
+            <li>Googleアカウント認証に必要なOAuthトークンおよび付与済みスコープの情報</li>
+          </ul>
+          <p>利用するGoogle APIの種類とアクセス権限は、MCPの構成および認証画面で承認したスコープによって異なります。編集機能を利用する場合、読み取り専用を超える権限が必要になります。</p>
+        </section>
+
+        <section id="purposes">
+          <h2>3. 情報の利用方法</h2>
+          <p>取得したデータは、利用者からの指示に基づくファイル検索、内容の参照、要約、文書作成、更新、開発作業の補助に使用します。広告配信やデータ販売を目的とした利用は行いません。</p>
+          <p>本アプリを経由してアクセスできるファイルの範囲は、Googleアカウントのアクセス権とOAuthスコープ等に依存します。特定のフォルダに限定する設定を行わない場合、当該アカウントが権限を持つ他のファイルも対象となり得ます。</p>
+        </section>
+
+        <section id="storage">
+          <h2>4. 保存と保護</h2>
+          <p>ローカルMCP構成では、OAuthクライアント認証情報やアクセストークン・更新トークンは利用者の端末に保存されます。保存先の一例は <code>~/.config/google-drive-mcp/</code> です。Google Driveの元ファイルは通常Google Drive上に保持されます。</p>
+          <p>本サイト自体はGoogle Driveの本文、OAuthトークン、Googleアカウントのパスワードを取得する機能を持ちません。ただし、MCPクライアントが実行する処理によっては、取得した内容や生成結果がローカルファイル、チャット履歴、外部サービス等に保存されることがあります。</p>
+          <p>認証情報は公開リポジトリに配置せず、利用者の端末で保護します。保存期間やログの扱いは、使用するMCPサーバーおよびAIクライアントの設定にも依存します。</p>
+        </section>
+
+        <section id="third-parties">
+          <h2>5. 外部サービスへの送信</h2>
+          <p>Google Driveから取得した文書の内容は、利用者が接続しているAIエージェントの処理のため、OpenAI（Codex）など利用するAIサービスの提供者へ送信される場合があります。送信される内容や保持期間などには、それぞれの提供者の規約・プライバシー設定が適用されます。</p>
+          <p>本サイトの公開にはGitHub Pagesを利用します。サイトへのアクセス時に、GitHubがホスティングの運用上必要な情報を処理する場合があります。本アプリの運用者がGoogle Driveの文書を広告目的で第三者へ販売・提供することはありません。</p>
+          <p>利用者は、機密性の高いファイルをAIエージェントに渡す前に、接続先サービスのデータ取扱条件を確認してください。</p>
+        </section>
+
+        <section id="retention">
+          <h2>6. 保持・削除・認可取消</h2>
+          <p>利用者は、<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Googleアカウントの第三者アクセス管理</a>から本アプリの認可を取り消せます。また、ローカルに保存された認証トークンを削除することで、その端末のMCP認証情報を消去できます。認可を取り消しても、すでにAIクライアントやローカル環境へ複製・送信された内容は自動的には削除されません。</p>
+          <p>ローカルMCPで保持するトークンは、認可が有効である間、APIアクセスに必要な期間保存されます。利用者は必要に応じて認可を取り消し、ローカルの保存情報を削除できます。</p>
+        </section>
+
+        <section id="tracking">
+          <h2>7. Webサイトの計測</h2>
+          <p>本サイトには、運用者独自のアクセス解析、広告、トラッキングCookie、問い合わせフォームを設置していません。ホスティングサービス側で行われる技術的なアクセス記録の処理についてはGitHubのプライバシーに関する案内が適用されます。</p>
+        </section>
+
+        <section id="changes">
+          <h2>8. ポリシーの変更</h2>
+          <p>本アプリで扱うデータの種類、利用目的、連携先などに変更がある場合は、本ポリシーを更新します。重要な変更が生じた場合は、新たな利用や認可に先立ち、必要な通知・同意確認を行います。更新日はページ上部に表示します。</p>
+        </section>
+
+        <section id="contact">
+          <h2>9. お問い合わせ</h2>
+          <p>本アプリの運用者は <a href="https://github.com/surumeneco" target="_blank" rel="noopener noreferrer">surumeneco</a> です。プライバシーに関する問い合わせは、<a href="https://github.com/surumeneco/GoogleDriveMCPOAuth/issues" target="_blank" rel="noopener noreferrer">GitHubリポジトリのIssues</a>から連絡できます。公開のIssueに認証情報や個人情報を記載しないでください。</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>GoogleDriveMCPOAuth</strong><p>個人開発用・非公式OAuthアプリ</p></div>
+      <nav aria-label="フッターナビゲーション"><a href="./index.html">ホーム</a><a href="./privacy.html">プライバシーポリシー</a><a href="https://github.com/surumeneco/GoogleDriveMCPOAuth" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
